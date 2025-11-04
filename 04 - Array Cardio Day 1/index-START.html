@@ -129,6 +129,19 @@
       // 8. Reduce Exercise
       // Sum up the instances of each of these
       const data = ["car", "car", "truck", "truck", "bike", "walk", "car", "van", "bike", "walk", "car", "van", "car", "truck"];
+
+      //Initialize the array of dataOccurences
+      let dataOccurences = [];
+
+      data.forEach(function (name, index) {
+        if (!dataOccurences.find((obj) => obj.name === name)) {
+          dataOccurences.push({ name: name, count: 1 });
+        } else {
+          dataOccurences.find((obj) => obj.name === name).count += 1;
+        }
+      });
+
+      console.log(dataOccurences);
     </script>
   </body>
 </html>
