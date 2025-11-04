@@ -54,6 +54,10 @@
       comments[comments.findIndex((comment) => comment.id === 823423)].text;
 
       // delete the comment with the ID of 823423
+      comments.splice(
+        comments.findIndex((comment) => comment.id === 823423),
+        1
+      );
     </script>
   </body>
 </html>
